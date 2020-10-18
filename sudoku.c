@@ -73,13 +73,11 @@ int is_final(Node* n){
   for (i=0;i<9;i++){
     for (j=0;j<9;j++){
       if (n->sudo[i][j]==0){
-        print_node(n);
         return 0;
       }
       
     }
   }
-  print_node(n);
     return 1;
 }
 
