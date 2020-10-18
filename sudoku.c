@@ -73,12 +73,12 @@ int is_final(Node* n){
   for (i=0;i<9;i++){
     for (j=0;j<9;j++){
       if (n->sudo[i][j]==1){
-        return 0;
+        return 1;
       }
       
     }
   }
-    return 1;
+    return 0;
 }
 
 Node* DFS(Node* n, int* cont){
