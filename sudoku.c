@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
+#include <stdbool.h>
 
 
 typedef struct{
@@ -68,26 +69,35 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-    return 0;
+  int i,j;
+  for (i=0;i<9;i++){
+    for (j=0;j<9;j++){
+      if (n->sudo[i][j]==1){
+        return 0;
+      }
+      
+    }
+  }
+    return 1;
 }
 
 Node* DFS(Node* n, int* cont){
-  return NULL;
-}
- /*  Stack *S = createStack();
+ /* Stack *S = createStack();
+  bool esVerdadero=true;
    push(S,n);
 
-   while (size(S) != 0){
+   while (first(S) != NULL && last(S) !=NULL){
       
-      Node * n= pop(S); // es al reves
-      n = top(S)
-      if (n.finalS == true) return n;
+      Node * n;
+      n = top(S); 
+      popFront(S);
+      
+      if (n.finalS == esVerdadero) return n;
 
-List * adj = get_adj_nodes(n);
-
-  return NULL;*/
-//}
-
+      List * adj = get_adj_nodes(n);
+    }*/
+return NULL;
+}
 
 
 
