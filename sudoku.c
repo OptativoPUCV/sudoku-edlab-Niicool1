@@ -78,6 +78,7 @@ int is_final(Node* n){
       
     }
   }
+  print_node(n);
     return 1;
 }
 
@@ -112,3 +113,4 @@ return NULL;
 
   return 0;
 }*/
+
